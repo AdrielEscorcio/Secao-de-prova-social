@@ -1,0 +1,210 @@
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 30px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+:root {
+  --Magenta: hsl(300, 43%, 22%);
+  --Pink: hsl(333, 80%, 67%);
+  --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+  --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "League Spartan";
+  src: url(../font/LeagueSpartan-VariableFont_wght.ttf);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  font-family: "League Spartan";
+  font-size: 15px;
+  color: var(--Dark-Grayish-Magenta);
+  background-image: url(../images/bg-pattern-top-desktop.svg), url(../images/bg-pattern-bottom-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: left 20vh top 0, right 0 bottom 0;
+}
+
+h1, .estrelas span {
+  color: var(--Magenta);
+  font-weight: 700;
+}
+
+.conteiner {
+  display: grid;
+  gap: 60px;
+  max-width: 930px;
+  max-height: 1400px;
+  padding: 10px;
+}
+
+.header {
+  display: grid;
+  gap: 50px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.informacao {
+  padding: 0 40px 0 0;
+}
+
+.informacao h1 {
+  font-size: 3rem;
+}
+
+.informacao p {
+  margin-top: 20px;
+  line-height: 20px;
+}
+
+.estrelas {
+  margin: 20px 0;
+}
+.estrelas div {
+  background-color: var(--Light-Grayish-Magenta);
+  padding: 15px 30px;
+  margin: 10px 0;
+  border-radius: 10px;
+}
+
+.um {
+  position: relative;
+  left: -25px;
+  width: 80%;
+}
+
+.dois {
+  position: relative;
+  width: 80%;
+}
+
+.tres {
+  position: relative;
+  left: 25px;
+  width: 80%;
+}
+
+.estrelas div span {
+  margin-left: 15px;
+  color: var(--Magenta);
+  font-weight: 700;
+}
+
+.comentarios {
+  width: 100%;
+  margin: 20px 0;
+  
+}
+
+.comentarios section {
+  display: inline-block;
+  width: 25%;
+  background-color: var(--Magenta);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.comentarios section img {
+  border-radius: 50%;
+  width: 30px;
+}
+
+.comentarios section div {
+  display: inline-block;
+  margin: 0 0 28px 15px;
+}
+
+.comentarios h2 {
+  color: var(--White);
+  font-size: 15px;
+  font-weight: 700;
+  margin: 5px 0;
+  letter-spacing: 1px;
+}
+
+.comentarios p {
+  color: var(--White);
+  font-weight: 100;
+  line-height: 20px;
+}
+
+.comentarios div span {
+  color: var(--Pink);
+}
+
+.card-um {
+  position: relative;
+  top: -20px;
+}
+
+.card-dois {
+  margin: 0 20px;
+}
+
+.card-tres {
+  position: relative;
+  bottom: -20px;
+}
+
+@media (max-width: 929px) {
+  body {
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 195vh;
+    background-image: url(../images/bg-pattern-top-mobile.svg), url(../images/bg-pattern-bottom-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: left 20vh top 0, right 0 bottom 0;
+  }
+
+  .conteiner {
+    gap: 10px;
+    margin: 0 20px;
+  }
+
+  .header {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .informacao {
+    padding: 0;
+  }
+
+  .estrelas div span {
+    display: block;
+    margin: 10px;
+  }
+
+  .um, .dois , .tres {
+    position: static;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .comentarios {
+    display: flex;
+    flex-wrap: wrap;
+    
+  }
+  .comentarios section {
+    width: auto;
+  }
+
+  .card-dois {
+    margin: 0;
+  }
+}
